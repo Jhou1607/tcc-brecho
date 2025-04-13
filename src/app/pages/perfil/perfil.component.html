@@ -1,0 +1,42 @@
+<div class="perfil-wrapper">
+  <div class="perfil-container">
+    <h2 class="titulo-perfil">Olá, {{ user.name }} 👋</h2>
+
+    <!-- Foto de perfil e botão -->
+    <div class="perfil-image">
+      <img [src]="user.photoUrl || 'assets/default-profile.jpg'" alt="Foto de Perfil" class="img-profile" />
+      <button (click)="editPhoto()">Alterar Foto</button>
+    </div>
+
+    <!-- Status -->
+    <div class="status">
+      <span class="status-dot"></span>
+      <span class="status-text">Online</span>
+    </div>
+
+    <!-- Informações principais -->
+    <div class="perfil-info">
+      <div class="info-box">
+        <p><strong>Email:</strong> {{ user.email }}</p>
+      </div>
+      <div class="info-box">
+        <p><strong>Data de Nascimento:</strong> {{ user.birthdate }}</p>
+      </div>
+      <div class="info-box">
+        <p><strong>Sexo:</strong> {{ user.gender }}</p>
+      </div>
+    </div>
+
+    <!-- Bio -->
+    <div class="bio-box">
+      <p><strong>Sobre você:</strong></p>
+      <p>{{ user.bio }}</p>
+    </div>
+
+    <!-- Botão para editar -->
+    <div class="perfil-buttons">
+      <button (click)="editProfile()">Alterar Dados</button>
+      <button class="full-width" (click)="logout()">Sair</button>
+    </div>
+  </div>
+</div>

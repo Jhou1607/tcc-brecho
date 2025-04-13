@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+<div class="form-wrapper">
+    <div class="form-container animate-fade">
+        <!-- Mensagem de boas-vindas -->
+        <h2 class="titulo-login">Bem-vindo de volta! 👋</h2>
+        <p class="subtitulo">Entre com seu e-mail e senha para continuar</p>
+
+        <form (ngSubmit)="onSubmit()">
+            <!-- Email -->
+            <nz-input-group [nzPrefix]="userIcon">
+                <input
+                        nz-input
+                        placeholder="E-mail"
+                        [(ngModel)]="email"
+                        name="email"
+                        type="email"
+                        required />
+            </nz-input-group>
+            <ng-template #userIcon>
+                <i class="fa fa-envelope"></i>
+            </ng-template>
+
+            <!-- Senha -->
+            <nz-input-group [nzPrefix]="passwordIcon" style="margin-top: 1rem;">
+                <input
+                        nz-input
+                        placeholder="Senha"
+                        [(ngModel)]="senha"
+                        name="senha"
+                        type="password"
+                        required />
+            </nz-input-group>
+            <ng-template #passwordIcon>
+                <i class="fa fa-lock"></i>
+            </ng-template>
+
+            <!-- Link: Esqueceu a senha -->
+            <div class="forgot-password">
+                Esqueceu sua senha? Clique <a (click)="onForgotPassword()">aqui</a>
+            </div>
+
+            <!-- Botão Entrar -->
+            <div class="btn-box">
+                <button nz-button nzType="primary" class="btn-login">
+                    Entrar
+                </button>
+            </div>
+        </form>
+
+        <!-- Divisor -->
+        <div class="divider">ou</div>
+
+        <!-- Login com Google -->
+        <button class="btn-google" (click)="loginWithGoogle()">
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" />
+            Entrar com o Google
+        </button>
+
+        <div class="cadastro-link">
+            <p>Ainda não tem cadastro? <a routerLink="/cadastro" class="link-cadastro">Cadastre-se aqui</a></p>
+        </div>
+    </div>
+</div>

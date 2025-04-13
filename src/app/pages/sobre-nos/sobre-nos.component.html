@@ -1,0 +1,52 @@
+<!-- Cabeçalho com menu lateral -->
+<header class="cabecalho" xmlns="http://www.w3.org/1999/html">
+  <div class="menu-icon" (click)="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+  <div class="titulo-site">Brechó Chic</div>
+  <div class="perfil-icon">
+    <i class="fas fa-user-circle" (click)="irParaPerfil()"></i>
+  </div>
+</header>
+
+<nav class="menu-lateral" [class.ativo]="menuAtivo">
+  <ul>
+    <li><a routerLink="/perfil" (click)="fecharMenu()">Perfil</a></li>
+    <li><a routerLink="/armario" (click)="fecharMenu()">Armário</a></li>
+    <li><a routerLink="/favoritos" (click)="fecharMenu()">Lista de Favoritos</a></li>
+    <li><a routerLink="/montagem" (click)="fecharMenu()">Montagem de Looks</a></li>
+    <li><a routerLink="/sobre-nos" (click)="fecharMenu()">Sobre Nossos Serviços</a></li>
+    <li><a routerLink="/conta" (click)="fecharMenu()">Conta</a></li>
+  </ul>
+
+  <hr class="divisoria" />
+
+  <div class="ajuda-contato">
+    <p class="ajuda-titulo">Precisa de ajuda?</p>
+    <p class="ajuda-telefone">+55 (14) 99999-9999</p><br>
+    <p class="ajuda-endereco">Endereço Rua Exemplo, 123 - Jardim Bacana<br/>Bauru - SP</p>
+  </div>
+</nav>
+
+<div class="sobre-container">
+  <h1>Sobre os nossos serviços</h1>
+
+  <div class="imagem-principal">
+    <img src="https://cdn.prod.website-files.com/6442917230668907a4b20c74/644fcb5a395a6ebc7ca4888c_marvin-meyer-SYTO3xs06fU-unsplash.jpg%20(2).jpg" alt="Foto do brechó">
+  </div>
+
+  <div class="texto-sobre">
+    <p>Nosso brechó oferece peças únicas e com história, selecionadas com muito carinho. Prezamos pela sustentabilidade e estilo, proporcionando uma experiência de moda consciente.</p>
+  </div>
+
+  <div class="equipe-secao">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqflauYYpBefO9DK2KnbuDwHciywQv8hP3-w&s  " alt="Equipe do brechó">
+    <div class="texto-equipe">
+      <p>Nosso time é formado por pessoas apaixonadas por moda e por fazer a diferença no mundo por meio do consumo consciente.</p>
+    </div>
+  </div>
+
+  <div class="texto-final">
+    <p>Além de vender, compramos suas peças! Entre em contato para saber mais sobre como revender conosco.</p>
+  </div>
+</div>

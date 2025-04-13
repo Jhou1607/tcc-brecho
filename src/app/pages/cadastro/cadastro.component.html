@@ -1,0 +1,80 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<div class="form-wrapper">
+  <div class="form-container animate-fade">
+    <h2 class="titulo-cadastro">Cadastro no Brechó</h2>
+
+    <form>
+      <nz-input-group [nzPrefix]="nomeIcon">
+        <input
+          nz-input
+          placeholder="Seu nome completo"
+          [(ngModel)]="nome"
+          name="nome"
+        />
+      </nz-input-group>
+      <ng-template #nomeIcon>
+        <i class="fa fa-user"></i>
+      </ng-template>
+
+      <nz-input-group [nzPrefix]="emailIcon" style="margin-top: 1rem;">
+        <input
+          nz-input
+          placeholder="Seu melhor e-mail"
+          [(ngModel)]="email"
+          name="email"
+          type="email"
+        />
+      </nz-input-group>
+      <ng-template #emailIcon>
+        <i class="fa fa-envelope"></i>
+      </ng-template>
+
+      <nz-input-group [nzPrefix]="senhaIcon" style="margin-top: 1rem;">
+        <input
+          nz-input
+          placeholder="Crie uma senha segura"
+          [(ngModel)]="senha"
+          name="senha"
+          type="password"
+        />
+      </nz-input-group>
+      <ng-template #senhaIcon>
+        <i class="fa fa-lock"></i>
+      </ng-template>
+
+      <div class="label">Data de nascimento</div>
+      <div class="data-nascimento">
+        <select nz-select [(ngModel)]="dia" name="dia">
+          <option *ngFor="let d of dias" [value]="d">{{ d }}</option>
+        </select>
+        <select nz-select [(ngModel)]="mes" name="mes">
+          <option *ngFor="let m of meses" [value]="m">{{ m }}</option>
+        </select>
+        <select nz-select [(ngModel)]="ano" name="ano">
+          <option *ngFor="let a of anos" [value]="a">{{ a }}</option>
+        </select>
+      </div>
+
+      <div class="label">Sexo</div>
+      <div class="sexo-box">
+        <label nz-checkbox [ngModel]="sexo === 'masculino'" (ngModelChange)="selecionarSexo('masculino')" name="sexoMasculino">
+          Masculino
+        </label>
+        <label nz-checkbox [ngModel]="sexo === 'feminino'" (ngModelChange)="selecionarSexo('feminino')" name="sexoFeminino">
+          Feminino
+        </label>
+      </div>
+
+      <p class="termos-texto">
+        Ao clicar em <strong>Cadastrar-se</strong> você concorda com nossos <a href="#">Termos</a>.
+      </p>
+
+      <div class="btn-box">
+        <button nz-button nzType="primary" class="btn-cadastrar custom-line-height">
+          Cadastrar-se
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

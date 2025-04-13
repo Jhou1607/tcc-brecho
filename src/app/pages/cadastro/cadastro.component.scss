@@ -1,0 +1,175 @@
+.form-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fffafd;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 2.5rem;
+  background: #fff0f6;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 15px rgba(214, 51, 132, 0.2);
+  animation: fadeIn 1s ease;
+}
+
+.titulo-cadastro {
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.8rem;
+  color: #d63384;
+  margin-bottom: 2rem;
+}
+
+input[nz-input] {
+  height: 48px;
+  font-size: 1rem;
+}
+
+.label {
+  margin: 1.5rem 0 0.5rem;
+  font-weight: 500;
+  color: #842029;
+  font-size: 1rem;
+}
+
+.data-nascimento {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+
+  select {
+    height: 50px;
+    font-size: 1.1rem;
+    flex: 1;
+  }
+}
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-cadastrar {
+  padding: 1.7rem 2.5rem;
+  font-size: 1.4rem;
+  background-color: #d63384;
+  border-color: #d63384;
+  border-radius: 1rem;
+  font-weight: 600;
+  width: fit-content;
+  min-width: 240px;
+  text-align: center;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.btn-cadastrar:hover {
+  background-color: #c22574;
+  border-color: #c22574;
+  transform: scale(1.03);
+}
+.animate-fade {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-line-height {
+  line-height: 0.1715 !important;
+}
+
+.nz-input-group i {
+  font-size: 1.5rem;
+  color: #d63384;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nz-input-group {
+  position: relative;
+}
+
+input[nz-input] {
+  padding-left: 1rem;
+}
+
+.ant-input-affix-wrapper {
+  font-size: 18px !important;
+}
+
+.sexo-box {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sexo-box label {
+  flex: 1;
+  padding: 1rem;
+  background-color: #ffe0f0; // rosa pastel
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #842029;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.sexo-box label:hover {
+  border-color: #d63384;
+  background-color: #ffd4e8;
+}
+
+::ng-deep .sexo-box .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #d63384 !important;
+  border-color: #d63384 !important;
+}
+
+::ng-deep .sexo-box .ant-checkbox-checked .ant-checkbox-inner::after {
+  border-color: #fff !important;
+}
+
+::ng-deep .sexo-box .ant-checkbox:hover .ant-checkbox-inner {
+  border-color: #d63384 !important;
+}
+
+::ng-deep .sexo-box .ant-checkbox-inner {
+  transition: all 0.3s ease;
+}
+
+.termos-texto {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+}
+
+.termos-texto a {
+  color: #d63384;
+  text-decoration: underline;
+}
+
+.termos-texto a:hover {
+  color: #c22574;
+}
